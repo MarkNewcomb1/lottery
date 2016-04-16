@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lottery</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+   <h1>Lottery</h1>
+    <div class="row">
+      <div class="one-half column">
+      <h2>Instructions</h2>
+          <h3>Build a webpage which does the following:</h3>
+<ul>
+    <li>The user starts with $10 in virtual money.</li>
+    <li>The user enters 4 distinct numbers between 1 and 10, inclusive. (see hint)</li>
+    <li>The user presses a button which costs them $2, and the computer generates four distinct random numbers between 1 and 10 inclusive which are shown to the user.</li>
+    <li>The user wins 2^n^2 (two to the n squared) dollars, where n is the number of numbers they guessed correctly. No winnings given if there are no matches. (0 = $0, 1 = $2, 2 = $16, 3 = $64, 4 = $4096)</li>
+</ul>
+        </div>
+        <div class="one-half column">
+<h4>Details</h4>
+<ul>
+    <li>Players cannot go into debt. Make sure the player has the money to pay for the lottery ticket. Display an error message if the user has run out of money.</li>
+    <li>Players should be able to play the same numbers over and over, but can change them if they want.</li>
+    <li>There is no upper limit to the amount you can win.</li>
+    <li>Make sure the user has entered valid numbers before they are allowed to play. Display an error message if the user has entered an invalid number.</li>
+    <li>Display an error message if the user has entered two of the same number</li>
+</ul>
+      </div>
+      </div>
+      <div class="row">
+      <div class="twelve columns">
+      <form>
+          <input type="number" name="quantity" min="1" max="10" id="num1">
+          <input type="number" name="quantity" min="1" max="10" id="num2">
+          <input type="number" name="quantity" min="1" max="10" id="num3">
+          <input type="number" name="quantity" min="1" max="10" id="num4">
+      </form>
+      <button class="button-primary" id="play">Play</button>
+      </div>
+    </div>
+    </div>
+<script src="script.js"></script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
