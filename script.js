@@ -1,9 +1,9 @@
 //user starts with $10
 var money = 10;
-var num1 = parseInt(document.getElementById("num1").value);
-var num2 = parseInt(document.getElementById("num2").value);
-var num3 = parseInt(document.getElementById("num3").value);
-var num4 = parseInt(document.getElementById("num4").value);
+var num1 = parseInt(document.getElementById("num1"));
+var num2 = parseInt(document.getElementById("num2"));
+var num3 = parseInt(document.getElementById("num3"));
+var num4 = parseInt(document.getElementById("num4"));
 
 var output = document.getElementById("output");
 
@@ -18,7 +18,8 @@ function pressButton () {
         console.log("That's not a number");
         return false;
     }
-    var arrayOfNumbersPlayed = [num1, num2, num3, num4];
+    
+    var arrayOfNumbersPlayed = [num1.value, num2.value, num3.value, num4.value];
     
     money -= 2;
     console.log("You pressed the button!");
