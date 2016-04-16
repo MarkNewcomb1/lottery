@@ -13,6 +13,11 @@ function pressButton () {
         output.innerHTML = "<span class='error'>Sorry, you don't have enough money to play</span>";
         return false;
     }
+    if (num1 !== parseInt(num1) || num2 !== parseInt(num2) || num3 !== parseInt(num3)  || num4 !== parseInt(num4) ) {
+      output.innerHTML = "<span class='error'>Please pick a number.</span>";
+        console.log("That's not a number");
+        return false;
+    }
     money -= 2;
     console.log("You pressed the button!");
     console.log(money);
