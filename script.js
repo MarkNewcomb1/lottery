@@ -16,6 +16,7 @@ function pressButton () {
     money -= 2;
     console.log("You pressed the button!");
     console.log(money);
+    console.log(typeof(num1));
 }
 	
 
