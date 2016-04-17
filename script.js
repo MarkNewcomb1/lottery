@@ -21,10 +21,6 @@ for (i = 0, j = arr.length; i < j; i++) {
     }
 }
 
-
-
-
-
 function pressButton () {
         if (money < 2) {
             output.innerHTML = "<span class='error'>Sorry, you don't have enough money to play.</span>";
@@ -42,14 +38,44 @@ function pressButton () {
     
     var arrayOfNumbersPlayed = [num1, num2, num3, num4];
     findDupes(arrayOfNumbersPlayed);
-    if (findDupes(arrayOfNumbersPlayed) == false) {
-        console.log("findDupes returned a false value");
-    }
+        if (findDupes(arrayOfNumbersPlayed) == false) {
+            console.log("findDupes returned a false value");
+        }
    
     money -= 2;
-    console.log("You pressed the button!");
-    console.log(money);
     console.log(arrayOfNumbersPlayed);
+    
+            var gameArr = [];
+        for (var i=0, t=4; i<t; i++) {
+            gameArr.push(Math.round(Math.random() * t))
+        }
+        console.log(gameArr);
+    
+    var howManyMatches = 0;
+    
+    for (var j = 0; j < gameArr.length; j++) {
+        if (arrayOfNumbersPlayed[j] == gameArr[j]) {
+                howManyMatches++;
+            }
+    }
+    console.log(howManyMatches);
+    
+    if (howManyMatches == 0) {
+        output.innerHTML = "<span class='error'>Sorry, no money won this time.</span>";
+    } else if (howManyMatches == 1) {
+        output.innerHTML = "<span class='win'>You won 2 dollars! Well...it cost you 2 dollars to play, so really you broke even, but I suppose that's splitting hairs a bit much for an output message in a game. Whatever, I'm keeping it real.</span>";
+        money += 2;
+    } else if (howManyMatches == 2) {
+        output.innerHTML = "<span class='win'>You won 4 dollars!</span>";
+        money += 4;
+    } else if (howManyMatches == 3) {
+        output.innerHTML = "<span class='win'>You won 16 dollars!</span>";
+        money += 16;
+    } else {
+        output.innerHTML = "<span class='win'>Wow, matches across all 4 numbers! You won 64 dollars!</span>";
+        money += 64;
+    }
+
 }
 
 
