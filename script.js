@@ -42,7 +42,7 @@ function pressButton () {
     
     var arrayOfNumbersPlayed = [num1, num2, num3, num4];
     findDupes(arrayOfNumbersPlayed);
-    if (findDupes == false) {
+    if (findDupes(arrayOfNumbersPlayed) == false) {
         console.log("findDupes returned a false value");
     }
    
