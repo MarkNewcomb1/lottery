@@ -47,7 +47,7 @@ function pressButton () {
     
             var gameArr = [];
         for (var i=0, t=4; i<t; i++) {
-            gameArr.push(Math.round(Math.random() * t))
+            gameArr.push(Math.round(Math.random() * 10))
         }
         console.log(gameArr);
     
