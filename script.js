@@ -7,6 +7,8 @@ var num4 = (document.getElementById("num4"));
 
 var output = document.getElementById("output");
 
+var lotteryNumbers = document.getElementById("lottery-numbers");
+
 var playButton = document.getElementById("play");
 
 function findDupes(arr) {
@@ -53,10 +55,12 @@ function pressButton () {
     
     var howManyMatches = 0;
     
-    for (var j = 0; j < gameArr.length; j++) {
-        if (arrayOfNumbersPlayed[j] == gameArr[j]) {
+    for (var j = 0; j < arrayOfNumbersPlayed.length; j++) {
+        for (var m = 0; m < gameArr.length; m++){
+        if (arrayOfNumbersPlayed[j] == gameArr[m]) {
                 howManyMatches++;
             }
+        }
     }
     console.log(howManyMatches);
     
