@@ -16,8 +16,8 @@ var duplicates = [],
     i, j;
 for (i = 0, j = arr.length; i < j; i++) {
       if (duplicates.indexOf(arr[i]) === -1 && arr.indexOf(arr[i], i+1) !== -1) {
-        console.log("Found Duplicates");
-        output.innerHTML = "<span class='error'>Please make sure all four numbers are unique.</span>";
+//        console.log("Found Duplicates");
+//        output.innerHTML = "<span class='error'>Please make sure all four numbers are unique.</span>";
         return false;
       }
     }
@@ -41,7 +41,9 @@ function pressButton () {
     var arrayOfNumbersPlayed = [num1, num2, num3, num4];
     findDupes(arrayOfNumbersPlayed);
         if (findDupes(arrayOfNumbersPlayed) == false) {
-            console.log("findDupes returned a false value");
+            output.innerHTML = "<span class='error'>Please make sure all four numbers are unique.</span>";
+             console.log("findDupes returned a false value");
+            return false;
         }
    
     money -= 2;
