@@ -160,6 +160,10 @@ p {
 .win {
     color: green;
 }
+h1 {
+    background-image: url(https://www.cabinetreport.com/uploads/lottery.jpg);
+    background-size: contain;
+}
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
