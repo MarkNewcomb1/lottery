@@ -163,6 +163,7 @@ p {
 h1 {
     background-image: url(https://www.cabinetreport.com/uploads/lottery.jpg);
     background-size: contain;
+    min-height: 15rem;
 }
 #wallet {
     font-size: 2em;
