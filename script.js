@@ -1,13 +1,15 @@
 //user starts with $10
 var money = 10;
-var num1 = (document.getElementById("num1"));
-var num2 = (document.getElementById("num2"));
-var num3 = (document.getElementById("num3"));
-var num4 = (document.getElementById("num4"));
+var num1;
+var num2;
+var num3;
+var num4;
 
 var output = document.getElementById("output");
 
 var lotteryNumbers = document.getElementById("lottery-numbers");
+
+var wallet = document.getElementById("wallet");
 
 var playButton = document.getElementById("play");
 
@@ -24,6 +26,10 @@ for (i = 0, j = arr.length; i < j; i++) {
 }
 
 function pressButton () {
+        num1 = (document.getElementById("num1"));
+        num2 = (document.getElementById("num2"));
+        num3 = (document.getElementById("num3"));
+        num4 = (document.getElementById("num4"));
         if (money < 2) {
             output.innerHTML = "<span class='error'>Sorry, you don't have enough money to play.</span>";
             return false;
@@ -66,6 +72,8 @@ function pressButton () {
     }
     console.log(howManyMatches);
     
+    lotteryNumbers.innerHTML = "The Lottery numbers are: " + gameArr;
+    
     if (howManyMatches == 0) {
         output.innerHTML = "<span class='error'>Sorry, no money won this time.</span>";
     } else if (howManyMatches == 1) {
@@ -81,7 +89,8 @@ function pressButton () {
         output.innerHTML = "<span class='win'>Wow, matches across all 4 numbers! You won 64 dollars!</span>";
         money += 64;
     }
-
+    wallet.innerHTML = "You now have $" + money + "!";
+    
 }
 
 
